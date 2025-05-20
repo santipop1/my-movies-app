@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
-import path from 'path';
 
 const Links = [
   { href: '/popular', label: 'Popular' },

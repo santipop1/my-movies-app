@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import Pill from "@/components/Pill/Pill";
 import Carrusel from "@/components/Carrusel/Carrusel";
 import { getUpcomingMovies, getGenres } from "@/services/movies/getMovies";
 import { IMovieDetail } from "@/types/IMovieDetail";
@@ -21,7 +19,7 @@ export default function Home() {
         const g = await getGenres();
         setGenres(g.genres || []);
       } catch (e) {
-        // handle error
+        console.error("Error loading data: ", e);
       }
       setLoading(false);
     };

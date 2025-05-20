@@ -1,7 +1,8 @@
 import api from "../api";
+import { IMovieDetail, Genre } from "@/types/IMovieDetail";
 
 export const getPopularMovies = async (page = 1) => {
-    let res: any;
+    let res: IMovieDetail;
     const endpoint = `/movie/popular?language=en-US&page=${page}`;
     await api
     .get(endpoint)
@@ -16,7 +17,7 @@ export const getPopularMovies = async (page = 1) => {
 };
 
 export const getNowPlayingMovies = async (page = 1) => {
-    let res: any;
+    let res: IMovieDetail;
     const endpoint = `/movie/now_playing?language=en-US&page=${page}`;
     await api
     .get(endpoint)
@@ -31,7 +32,7 @@ export const getNowPlayingMovies = async (page = 1) => {
 };
 
 export const getTopRatedMovies = async (page = 1) => {
-    let res: any;
+    let res: IMovieDetail;
     const endpoint = `/movie/top_rated?language=en-US&page=${page}`;
     await api
     .get(endpoint)
@@ -46,7 +47,7 @@ export const getTopRatedMovies = async (page = 1) => {
 };
 
 export const getUpcomingMovies = async (page = 1) => {
-    let res: any;
+    let res: IMovieDetail;
     const endpoint = `/movie/upcoming?language=en-US&page=${page}`;
     await api
     .get(endpoint)
@@ -60,7 +61,7 @@ export const getUpcomingMovies = async (page = 1) => {
 };
 
 export const getGenres = async () => {
-    let res: any;
+    let res: Genre;
     const endpoint = '/genre/movie/list?language=en';
     await api
     .get(endpoint)

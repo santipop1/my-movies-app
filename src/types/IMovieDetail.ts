@@ -26,13 +26,14 @@ export interface IMovieDetail {
   vote_average: number;
   vote_count: number;
 }
+
 interface BelongsToCollection {
   id: number;
   name: string;
   poster_path: string;
   backdrop_path: string;
 }
-interface Genre {
+export interface Genre {
   id: number;
   name: string;
 }
